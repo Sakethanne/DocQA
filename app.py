@@ -39,8 +39,8 @@ Answer:"""
 prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 
 # initialize the LLM & Embeddings
-llm = LlamaCpp(model_path="./models/llama-7b.ggmlv3.q4_0.bin")
-embeddings = LlamaCppEmbeddings(model_path="models/llama-7b.ggmlv3.q4_0.bin")
+llm = LlamaCpp(model_path="/Users/sakethanne/Documents/cs572/HW4/DocQA/models/llama-2-7b.Q4_0.gguf")
+embeddings = LlamaCppEmbeddings(model_path="/Users/sakethanne/Documents/cs572/HW4/DocQA/models/llama-2-7b.Q4_0.gguf")
 llm_chain = LLMChain(llm=llm, prompt=prompt)
 
 st.title("📄 Document Conversation 🤖")
